@@ -1,0 +1,32 @@
+spring:
+application:
+name: OpenReqs
+datasource:
+url: jdbc:h2:mem:openreqsdb
+driver-class-name: org.h2.Driver
+username: sa
+password:
+h2:
+console:
+enabled: true
+path: /h2-console
+jpa:
+hibernate:
+ddl-auto: create-drop
+show-sql: true
+properties:
+hibernate:
+format_sql: true
+database-platform: org.hibernate.dialect.H2Dialect
+
+springdoc:
+api-docs:
+path: /api-docs
+swagger-ui:
+path: /swagger-ui.html
+operations-sorter: method
+tags-sorter: alpha
+
+logging:
+level:
+com.openreqs: DEBUG
